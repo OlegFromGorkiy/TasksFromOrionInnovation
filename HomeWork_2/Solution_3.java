@@ -59,11 +59,11 @@ public class Solution_3 {
         int length = Math.max(first.length, second.length);
         int[] result = new int[length];
         try {
-            for (int i = 0; i < first.length; i++) {
+            for (int i = 0; i < length; i++) {
                 result[i] = first[i] + second[i];
             }
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Arrays of different lengths are used as arguments");
+            System.out.println("Warning! Arrays of different lengths are used as arguments");
         }
         return result;
     }
