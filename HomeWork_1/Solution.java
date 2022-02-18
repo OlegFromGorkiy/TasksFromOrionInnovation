@@ -32,20 +32,17 @@ public class Solution {
             System.out.println(String.format("Число %s меньше %s", first.toString(), second.toString()));
         } else System.out.println(String.format("Число %s равно %s", first.toString(), second.toString()));
 
-        int summ = first + second;
-        System.out.println((String.format("Сумма введеных чисел равна %d", summ)));
+        System.out.println((String.format("Сумма введеных чисел равна %d", first + second)));
     }
 
     static Integer enterTheNumber(BufferedReader console) throws IOException {
-        Integer i = null;
-        System.out.println("Пожалуйста, введите число.");
-        while (i == null) {
+        while (true) {
             try {
-                i = Integer.parseInt(console.readLine());
+                System.out.println("Пожалуйста, введите число.");
+                return Integer.parseInt(console.readLine());
             } catch (NumberFormatException nfe) {
-                System.out.println("Извините, вы ввели не число. Попробуйте снова.");
+                System.out.println("Извините, но вы ввели не число.");
             }
         }
-        return i;
     }
 }
